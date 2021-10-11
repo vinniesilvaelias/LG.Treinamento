@@ -22,10 +22,10 @@ public class NHibernateClass
                     .ConnectionString(
                         cs =>
                         {
-                            cs.Server(@"DESKTOP-4H004PB\SQL2019");
-                            cs.Username("sa");
-                            cs.Password("754vini!@#");
-                            cs.Database("treinamento_lg");
+                            cs.Server(@"");
+                            cs.Username("");
+                            cs.Password("");
+                            cs.Database("");
                         })
                     )
             .Cache(
