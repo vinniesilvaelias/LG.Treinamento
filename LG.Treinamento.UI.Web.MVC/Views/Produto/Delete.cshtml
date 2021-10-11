@@ -1,0 +1,57 @@
+﻿@model LG.Treinamento.Negocio.Models.Produto
+
+@{
+    ViewBag.Title = "Deletar | Produto";
+}
+
+<h2>Deletar</h2>
+
+<h3>Deseja excluir?</h3>
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prateleira)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prateleira)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Corredor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Corredor)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Deletar" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>

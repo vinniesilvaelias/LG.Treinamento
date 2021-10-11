@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LG.Treinamento.Negocio", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LG.Treinamento.UI.Windows", "LG.Treinamento.UI.Windows\LG.Treinamento.UI.Windows.csproj", "{38179485-A385-4328-A986-82B9B2472602}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LG.Treinamento.UI.Web.MVC", "LG.Treinamento.UI.Web.MVC\LG.Treinamento.UI.Web.MVC.csproj", "{37EDB3E0-64B6-4508-86DC-2AA775B4AF41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{38179485-A385-4328-A986-82B9B2472602}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38179485-A385-4328-A986-82B9B2472602}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38179485-A385-4328-A986-82B9B2472602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37EDB3E0-64B6-4508-86DC-2AA775B4AF41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37EDB3E0-64B6-4508-86DC-2AA775B4AF41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37EDB3E0-64B6-4508-86DC-2AA775B4AF41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37EDB3E0-64B6-4508-86DC-2AA775B4AF41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

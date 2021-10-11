@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using NHibernate;
 
 namespace LG.Treinamento.Data
 {
-    public class Dao<TEntity> : IDisposable 
-        where TEntity : class
+    public class Dao<TEntity> : IDisposable
+       where TEntity : class
     {
         public void Create(TEntity entity) => TryExecute(Session => Session.Save(entity));
 
@@ -13,6 +14,18 @@ namespace LG.Treinamento.Data
         public void Delete(TEntity entity) => TryExecute(Session => Session.Delete(entity));
 
         public TEntity Select(int id) => TryExecute(Session => Session.Get<TEntity>(id));
+
+        public IList<TEntity> SelectAll()
+        {
+            try
+            {
+                return NHibernateClass.GetCurrentSession().CreateCriteria<TEntity>().List<TEntity>();
+            }
+            finally
+            {
+                NHibernateClass.CloseSession();
+            }
+        }
 
         private static TEntity TryExecute(Func<ISession, TEntity> func)
         {
@@ -48,6 +61,11 @@ namespace LG.Treinamento.Data
             NHibernateClass.CloseSessionFactory();
             NHibernateClass.CloseSession();
             GC.SuppressFinalize(this);
+        }
+
+        public void Select(int? id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
